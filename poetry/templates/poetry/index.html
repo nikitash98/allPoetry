@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'poetry/base.html' %}
+{% block body %}
+<head>
+  <title> AllPoetry </title>
+</head>
+
+  <h1> Today's Poem </h1>
+<div class = "thetop">
+<div class = "featured_poem">
+    <h2> <a href = "{{featured_poem.pk}}">{{featured_poem.title}} </a></h2>
+    <h3> <a href = "{% url 'poetry:authordetail' featured_poem.writer.pk%}"> {{featured_poem.writer}}</a> </h3>
+    <body> {{featured_poem.text | linebreaks}} </body>
+  </div>
+<div class = "right">
+  <img src = "/media/frankphone.jpg">
+</div>
+</div>
+
+
+<div class = "thebottom">
+<h1> FEATURED POETS</h1>
+<div class = "featured_poets">
+{% for item in all_authors %}
+<div class = "the_feature">
+  <a href = "{% url 'poetry:authordetail' item.pk %}">
+  <img src = "{{item.portrait.url}}">
+  <br>
+  <h3> {{ item.name }} </h3>
+  </a>
+</div>
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}

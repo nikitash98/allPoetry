@@ -1,0 +1,151 @@
+a{
+  color: #3498db;
+}
+.navbar-brand{
+  color: white;
+}
+ .nav li a:active, .nav li a:hover{
+  background-color: #3cb0fd;
+  color: black;
+}
+.nav li a:focus{
+  background-color: #3498db;
+}
+body{
+  background-color: #ECF0F1;
+}
+.navbar{
+  border-radius: 0px;
+  background-color: #3498db;
+  border: 0px;
+}
+.featured_poem{
+  width: 300px;
+  position: relative;
+  padding: 20px;
+  border: 1px solid #3498db;
+  display: inline-block;
+}
+.featured_poem h2{
+  font-family: "century gothic";
+  font-weight: bold;
+}
+.modal-content{
+  text-align: center;
+}
+
+.thebottom{
+  text-align: center;
+}
+.thebottom h1{
+  font-family: "verdana";
+  font-weight: light;
+  font-size: 25px;
+}
+.featured_poets{
+  text-align: center;
+}
+.the_feature{
+
+  vertical-align: middle;
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  text-align: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.thetop{
+  overflow: visible;
+}
+.right{
+  position: relative;
+  float: right;
+  right: 10%;
+}
+.right img {
+  width: 300px;
+}
+.the_feature img{
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+}
+.the_feature img:hover{
+  border: 2px solid #3498db;
+}
+
+.nav li a{
+  color: white;
+}
+
+.form-control{
+  border-radius: 0px;
+  border:0px;
+}
+span{
+  background-color: white;
+}
+.author_profile{
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+}
+.author_profile img{
+  width: 200px;
+}
+.authorpage{
+  text-align: center;
+}
+.their_poems{
+  position: relative;
+  display: inline-block;
+  position: relative;
+}
+
+.their_poems h2{
+  font-size: 20px;
+  background-color: #3498db;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 0px;
+}
+.their_poems h2:hover{
+  background-color: #81c2ee;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: helvetica;
+}
+
+.poem_page{
+  padding: 30px;
+  left: 10%;
+  position: relative;
+}
+.poem_page h1{
+  font-family: "century gothic";
+  font-weight: bold;
+}
+.poem_page h2{
+  font-family: "bodoni mt";
+  font-weight: bold;
+  font-size: 25px;
+}
+.poem_page h3{
+  font-family: "bodoni mt";
+  font-weight: bold;
+  font-size: 25px;
+}
+.explore_page .poem_page h1{
+  margin: 0px;
+  padding: 0px;
+}

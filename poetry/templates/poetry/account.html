@@ -1,0 +1,44 @@
+{% extends 'poetry/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<link rel = "stylesheet" type = "text/css" href = "{% static 'poetry/account.css' %}" />
+
+<html>
+<div class = "account">
+<img src ="{{user.profile.picture.url}}">
+<h1> {{user.username}} </h1>
+<h3> Put your bio here! </h3>
+</div>
+<div class = "right">
+  <div class = "favorite_poems">
+    <h1> Favorited Poems </h1>
+    <div class = "their_poems">
+      The Poems
+      {%for poem in user.profile.poemfavorites.all%}
+      <a href = "{% url 'poetry:poemdetail' poem.pk %}">  <h2> {{poem.title}} </h2></a>
+      {% endfor%}
+    </div>
+  </div>
+  <div class = "favorite_lines">
+    <h1> Favorite Lines </h1>
+    {%for line in user.profile.linefavorite.all%}
+    <div class = "aline">
+      <h3>
+      <a href = "{% url 'poetry:poemdetail' line.poem.pk %}">  {{line.poem.title}} </a>
+    </h3>
+      <br>
+      {{line.thewords|linebreaks}}
+      <br>
+      By: <a href = "{% url 'poetry:authordetail' line.poem.writer.pk %}">  {{line.poem.writer}} </a>
+
+      {% endfor%}
+  </div>
+  </div>
+  <div class  = "written poems">
+    <h1> Written Poems </h1>
+  </div>
+</div>
+</html>
+{% endblock %}

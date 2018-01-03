@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% extends 'poetry/base.html' %}
+{% block body %}
+{% load staticfiles %}
+<script>
+var poemNum = {{thepoem.pk}};
+</script>
+<div class = "poem_page">
+<h1>{{thepoem.title}}</h1>
+<h2>By: <a href = "{% url 'poetry:authordetail' thepoem.writer.pk %}">{{thepoem.writer}}</a></h2>
+<body>{{thepoem.text|linebreaks }}</body>
+{% if isfavorite %}
+<button class = "favoritepoem">Unfavorite Poem </button>
+{% else %}
+<button class = "favoritepoem">Favorite Poem </button>
+{% endif %}
+<button class = "favoriteline">Favorite Line</button>
+</div>
+<script src = "{% static 'poetry/poemdetail.js' %}"></script>
+{% endblock %}

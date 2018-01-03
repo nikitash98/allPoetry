@@ -1,0 +1,30 @@
+
+.exposed {
+    transition: .5s transform ease-in-out;
+    transform-origin: top;
+    transform: rotateX(0deg);
+}
+.hidden {
+    transition: .5s transform ease-in-out;
+    transform-origin: top;
+    transform: rotateX(90deg);
+
+}
+
+
+.arrow {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+    border-style: none;
+  text-decoration: none;
+  margin-left: 5%;
+  padding-right: 100px;
+}
+
+.arrow:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}

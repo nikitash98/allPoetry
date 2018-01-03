@@ -1,0 +1,28 @@
+.account img{
+  width: 200px;
+  border-radius: 20px;
+}
+.account{
+  text-align: center;
+  position: fixed;
+  width: 300px;
+  padding: 0px;
+  overflow: hidden;
+
+}
+.account h1{
+  font-weight: bold;
+}
+.right{
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  left: 300px;
+  width: 60%;
+}
+.aline{
+  background-color: white;
+  margin: 20px;
+  position: inherit;
+
+}

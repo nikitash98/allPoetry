@@ -1,0 +1,15 @@
+{% extends 'poetry/base.html '%}
+{% block body %}
+<div class = "authorpage">
+<div class = "author_profile">
+<img src = "{{author.portrait.url}}">
+<h1> {{author.name}} </h1>
+</div>
+<div class = "their_poems">
+  The Poems
+{%for item in author.poem_set.all %}
+  <a href = "{% url 'poetry:poemdetail' item.pk %}">  <h2> {{item.title}} </h2></a>
+  {% endfor%}
+{% endblock %}
+</div>
+</div>

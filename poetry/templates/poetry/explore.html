@@ -1,0 +1,37 @@
+{% extends 'poetry/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+      <script>
+        var poem = {{thepoem|safe}};
+        widget.init(poem);
+      </script>
+
+      <div class = "explore_page">
+        <div class = "poem_page">
+        <h1>
+        </h1>
+
+
+        <br>
+        <h3>
+        </h3>
+        <br>
+        <div class = "explorePoem">
+
+        </div>
+        <br>
+        <button class = "arrow">&#8594;</button>
+      </div>
+    </div>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type = "text/javascript" src = "{% static 'poetry/code.js' %}"></script>
+        <link rel = "stylesheet" href="{% static 'poetry/explorestyle.css' %}">
+</html>
+{% endblock %}
